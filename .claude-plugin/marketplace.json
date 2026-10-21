@@ -1,0 +1,12 @@
+{
+  "name": "blinkbrosai",
+  "description": "Claude Code plugins from blinkbros",
+  "owner": { "name": "blinkbros" },
+  "plugins": [
+    {
+      "name": "blink-artifact",
+      "source": "./plugins/blink-artifact",
+      "description": "blink artifact MCP server and a clickable status link for the artifact you are working on."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "blink-artifact",
+  "version": "1.0.0",
+  "description": "Publish and live-edit artifacts with blink artifact over MCP; shows the artifact you are working on under the prompt as a link.",
+  "author": { "name": "blinkbros" },
+  "homepage": "https://artifact.blinkbrosai.com",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "token": {
+      "type": "string",
+      "title": "blink artifact API token",
+      "description": "Create one at https://artifact.blinkbrosai.com/app#agent (starts with ba_).",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "mcpServers": {
+    "blink-artifact": {
+      "type": "http",
+      "url": "https://artifact.blinkbrosai.com/mcp",
+      "headers": { "Authorization": "Bearer ${user_config.token}" }
+    }
+  }
+}
