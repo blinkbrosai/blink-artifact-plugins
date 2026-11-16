@@ -7,6 +7,11 @@
       "name": "blink-artifact",
       "source": "./plugins/blink-artifact",
       "description": "blink artifact MCP server and a clickable status link for the artifact you are working on."
+    },
+    {
+      "name": "blink-connectors",
+      "source": "./plugins/blink-connectors",
+      "description": "Blink Connectors MCP server: all your connected apps as tools in one server."
     }
   ]
 }

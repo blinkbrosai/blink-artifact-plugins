@@ -30,6 +30,27 @@ To change the token later: `/plugin configure blink-artifact@blinkbrosai`.
 
 If you already added the server with `claude mcp add`, that entry takes precedence; you can remove it with `claude mcp remove blink-artifact`.
 
+## blink-connectors
+
+[Blink Connectors](https://connectors.blinkbrosai.com) puts every app you connect (Gmail, GitHub, Notion, Slack and more) behind one MCP server. Claude Code sees their actions as tools.
+
+### Install
+
+1. Open a project at https://connectors.blinkbrosai.com/app and copy its key (starts with `sk_`). The key is shown once.
+2. In Claude Code, run:
+
+```
+/plugin install blink-connectors --marketplace blinkbrosai/blink-artifact-plugins
+```
+
+3. Paste the key, then enter a user id for yourself, such as your email. Accounts you connect are saved under this id, so keep it the same on every machine.
+
+To connect an app, ask Claude, for example "connect my Gmail". It returns a link; open it in your browser and sign in. Then run `/mcp`, reconnect `blink-connectors`, and the app's tools appear.
+
+To change the key or user id later: `/plugin configure blink-connectors@blinkbrosai`.
+
+If you already added the server with `claude mcp add`, that entry takes precedence; you can remove it with `claude mcp remove blink-connectors`.
+
 ## License
 
 MIT
