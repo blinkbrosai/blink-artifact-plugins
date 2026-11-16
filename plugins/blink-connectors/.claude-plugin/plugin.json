@@ -1,6 +1,6 @@
 {
   "name": "blink-connectors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use every app you connect in Blink Connectors (Gmail, GitHub, Notion, Slack and more) from Claude Code through one MCP server.",
   "author": { "name": "blinkbros" },
   "homepage": "https://connectors.blinkbrosai.com",
@@ -11,13 +11,6 @@
       "description": "Open a project at https://connectors.blinkbrosai.com/app and copy its key (starts with sk_).",
       "sensitive": true,
       "required": true
-    },
-    "user": {
-      "type": "string",
-      "title": "Your user id",
-      "description": "Any stable id for you, such as your email. Accounts you connect are saved under this id.",
-      "sensitive": false,
-      "required": true
     }
   },
   "mcpServers": {
@@ -26,7 +19,7 @@
       "url": "https://connectors.blinkbrosai.com/v1/mcp",
       "headers": {
         "Authorization": "Bearer ${user_config.key}",
-        "x-bc-external-user-id": "${user_config.user}",
+        "x-bc-external-user-id": "me",
         "x-bc-connect-tool": "1"
       }
     }

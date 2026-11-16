@@ -43,11 +43,11 @@ If you already added the server with `claude mcp add`, that entry takes preceden
 /plugin install blink-connectors --marketplace blinkbrosai/blink-artifact-plugins
 ```
 
-3. Paste the key, then enter a user id for yourself, such as your email. Accounts you connect are saved under this id, so keep it the same on every machine.
+3. Paste the key. Accounts you connect are saved under this key, so use the same key on every machine. Each person needs their own project.
 
 To connect an app, ask Claude, for example "connect my Gmail". It returns a link; open it in your browser and sign in. Then run `/mcp`, reconnect `blink-connectors`, and the app's tools appear.
 
-To change the key or user id later: `/plugin configure blink-connectors@blinkbrosai`.
+To change the key later: `/plugin configure blink-connectors@blinkbrosai`.
 
 If you already added the server with `claude mcp add`, that entry takes precedence; you can remove it with `claude mcp remove blink-connectors`.
 
