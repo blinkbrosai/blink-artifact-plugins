@@ -9,24 +9,20 @@
 
 ### Install
 
-1. Create an API token at https://artifact.blinkbrosai.com/app#agent
-2. In Claude Code, run:
+In Claude Code, run:
 
 ```
 /plugin install blink-artifact --marketplace blinkbrosai/blink-artifact-plugins
 ```
 
-Answer `y` to add the marketplace, choose a scope, then paste your token when asked. The token is stored in your system's secure credential storage.
+Answer `y` to add the marketplace and choose a scope. Then run `/mcp`, pick `blink-artifact` and choose **Authenticate**: the browser opens, you sign in, and the tools load. No token is needed.
 
 From a shell:
 
 ```
 claude plugin marketplace add blinkbrosai/blink-artifact-plugins
 claude plugin install blink-artifact@blinkbrosai
-claude plugin configure blink-artifact@blinkbrosai
 ```
-
-To change the token later: `/plugin configure blink-artifact@blinkbrosai`.
 
 If you already added the server with `claude mcp add`, that entry takes precedence; you can remove it with `claude mcp remove blink-artifact`.
 
